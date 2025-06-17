@@ -10,13 +10,22 @@ services:
       - my-app-network
 
   nginx:
-    image: nginx:latest
-    ports:
-      - "80:80"
-    volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    image: nginx:alpine
     depends_on:
       - app
+    environment:
+      - TZ=Europe/Moscow
+      - NGINX_HOST=localhost
+      - ROOT_DIRECTORY=/
+    command: [
+      "/bin/sh",
+      "-c",
+      "export NGINX_HOST; export ROOT_DIRECTORY; envsubst '$$NGINX_HOST,$$ROOT_DIRECTORY' < /nginx.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
+    ]
+    volumes:
+      - ./nginx/development.template:/nginx.template
+    ports:
+      - 80:80
     networks:
       - my-app-network
 
