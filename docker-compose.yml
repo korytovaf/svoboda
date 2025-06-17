@@ -10,6 +10,8 @@ services:
       - NODE_ENV=production
     expose:
       - 3000
+    volumes:
+      - nuxt_output:/app/.output  # 💾 Общий volume
 
   nginx:
     image: nginx:alpine
@@ -26,5 +28,9 @@ services:
       nginx -g 'daemon off;'"
     volumes:
       - ./nginx/development.template:/nginx.template
+      - nuxt_output:/app/.output  # 💾 Тот же volume, монтируем в Nginx
     ports:
       - "80:80"
+
+volumes:
+  nuxt_output:  # 👈 Shared Docker volume
