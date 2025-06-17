@@ -14,7 +14,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./nginx/nginx.template:/etc/nginx/templates/default.conf.template:ro
+      - ./nginx/nginx.conf:/etc/nginx/templates/default.conf.template:ro
     environment:
       - NGINX_HOST=localhost
       - ROOT_DIRECTORY=/
