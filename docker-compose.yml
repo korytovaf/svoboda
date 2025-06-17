@@ -3,8 +3,6 @@ version: "3.8"
 services:
   nginx:
     image: nginx:alpine
-    depends_on:
-      - backend
     environment:
       - TZ=Europe/Moscow
       - NGINX_HOST=localhost
