@@ -13,10 +13,8 @@ services:
     image: nginx:latest
     ports:
       - "80:80"
-      - "443:443" # Если используете HTTPS
     volumes:
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
-      - /etc/letsencrypt:/etc/letsencrypt:ro # Если используете HTTPS
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
     depends_on:
       - app
     networks:
