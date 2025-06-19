@@ -11,10 +11,15 @@
       <div class="grid md:grid-cols-1 grid-cols-2 gap-10">
         <div>
           <h1 class="title">{{ newsItem?.title }}</h1>
+          <div class="hidden md:block my-5">
+            <div class="w-full overflow-hidden">
+              <img :src="newsItem?.image" :alt="newsItem?.title" class="w-full h-full object-cover" />
+            </div>
+          </div>
           <p class="excerpt">{{ newsItem?.excerpt }}</p>
           <p class="excerpt mt-5">{{ newsItem?.text }}</p>
         </div>
-        <div>
+        <div class="md:hidden">
           <div class="w-full overflow-hidden">
             <img :src="newsItem?.image" :alt="newsItem?.title" class="w-full h-full object-cover" />
           </div>
