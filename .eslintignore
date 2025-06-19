@@ -1,0 +1,11 @@
+/.git
+/.vscode
+/.idea
+node_modules
+.nuxt
+.output
+.yarn
+yarn.lock
+.husky
+
+/components/ui
