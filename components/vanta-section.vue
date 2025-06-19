@@ -1,5 +1,5 @@
 <template>
-  <section ref="vantaRef" class="h-screen relative text-center text-white scroll-snap-child flex items-center justify-center">
+  <section ref="vantaRef" class="h-[100dvh] relative text-center text-white flex items-center justify-center">
     <div class="relative z-10 opacity-0 transition-opacity duration-500" :class="{ 'opacity-100': vanta.vantaReady }">
       <img src="/images/SVOBODA_LOGO_blue.svg" alt="Логотип" class="h-32 mx-auto" />
     </div>
