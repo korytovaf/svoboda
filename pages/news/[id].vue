@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="flex items-center border-b border-gray-100 h-24">
+    <header class="flex items-center border-b border-gray-100 h-14">
       <div class="ui-section">
         <nuxt-link to="/" class="text-blue-500">
           <icons-logo class="h-10" />
