@@ -1,6 +1,6 @@
 <template>
   <section class="ui-section pb-[50px]">
-    <h2 class="ui-section-title">Sound</h2>
+    <h2 class="ui-section-title">LATEST RELEASE</h2>
 
     <ul class="grid grid-cols-2 md:grid-cols-1 gap-x-5 gap-y-[45px] max-w-7xl mx-auto">
       <li v-for="item in sounds" :key="item.id" class="">
