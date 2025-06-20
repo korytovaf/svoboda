@@ -1,7 +1,7 @@
 <template>
   <section ref="vantaRef" class="h-screen md:h-[90vh] relative text-center text-white flex items-center justify-center">
     <div class="relative z-10 opacity-0 transition-opacity duration-500" :class="{ 'opacity-100': vanta.vantaReady }">
-      <img src="/images/SVOBODA_LOGO_blue.svg" alt="Логотип" class="h-[56px] mx-auto" />
+      <img src="/images/SVOBODA_LOGO_blue.svg" alt="Логотип" class="w-[80vw] max-w-[900px] mx-auto" />
     </div>
     <div
       class="absolute bottom-5 w-full flex justify-center text-[#fff]"
